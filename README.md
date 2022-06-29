@@ -1,4 +1,4 @@
-# Automatic Image Deduplicator using PyTorch
+# Automatic Image Deduplication using PyTorch
 
 ## Project Overview
 Sometimes I have a directory with many images that contains a lot of duplicated images (with different names) among them. I decided to use machine learning and deep learning, instead of doing a manual search, to find and delete these duplicated images. 
