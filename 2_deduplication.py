@@ -28,10 +28,14 @@ all_files = set(clusters["path"])
 files_to_remove = all_files - list_to_keep
 logger.info(f"Found {len(files_to_remove)} duplicate files:\n {files_to_remove}")
 
+for group, paths in clusters[clusters["label"].duplicated(keep=False)].groupby("label")["path"]:
+    print(f'Duplicate items for "{paths.iloc[0]}" are:\n {paths.iloc[1:].values}\n')
+
+
 if delete_files:
     for file_path in files_to_remove:
         try:
             os.remove(file_path)
         except OSError as e:
-            print("Cannot delete file '%s': %s" % (file_path, e.strerror))
+            logger.exception("Cannot delete file '%s': %s" % (file_path, e.strerror))
     logger.info(f"Successfully deleted {len(files_to_remove)} duplicate files.")
