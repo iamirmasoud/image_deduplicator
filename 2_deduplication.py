@@ -28,7 +28,9 @@ all_files = set(clusters["path"])
 files_to_remove = all_files - list_to_keep
 logger.info(f"Found {len(files_to_remove)} duplicate files:\n {files_to_remove}")
 
-for group, paths in clusters[clusters["label"].duplicated(keep=False)].groupby("label")["path"]:
+for group, paths in clusters[clusters["label"].duplicated(keep=False)].groupby("label")[
+    "path"
+]:
     print(f'Duplicate items for "{paths.iloc[0]}" are:\n {paths.iloc[1:].values}\n')
 
 
