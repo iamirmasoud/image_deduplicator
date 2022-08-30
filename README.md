@@ -28,22 +28,22 @@ cd image_deduplicator
 	
 	At this point your command line should look something like: `(deduplicator_env) <User>:image_deduplicator <user>$`. The `(deduplicator_env)` indicates that your environment has been activated, and you can proceed with further package installations.
 
-6. Before you can experiment with the code, you'll have to make sure that you have all the libraries and dependencies required to support this project. You will mainly need Python3.7+, PyTorch and its torchvision, OpenCV, and Matplotlib. You can install  dependencies using:
+3. Before you can experiment with the code, you'll have to make sure that you have all the libraries and dependencies required to support this project. You will mainly need Python3.7+, PyTorch and its torchvision, OpenCV, and Matplotlib. You can install  dependencies using:
 ```
 pip install -r requirements.txt
 ```
 
-7. Navigate back to the repo. (Also, your source environment should still be activated at this point.)
+4. Navigate back to the repo. (Also, your source environment should still be activated at this point.)
 ```shell
 cd image_deduplicator
 ```
 
-8. Open the directory of notebooks, using the below command. You'll see all of the project files appear in your local environment; open the first notebook and follow the instructions.
+5. Open the directory of notebooks, using the below command. You'll see all of the project files appear in your local environment; open the first notebook and follow the instructions.
 ```shell
 jupyter notebook
 ```
 
-9. Once you open any of the project notebooks, make sure you are in the correct `deduplicator_env` environment by clicking `Kernel > Change Kernel > deduplicator_env`.
+6. Once you open any of the project notebooks, make sure you are in the correct `deduplicator_env` environment by clicking `Kernel > Change Kernel > deduplicator_env`.
 
 ## Project Structure
 
